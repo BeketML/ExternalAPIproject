@@ -5,12 +5,6 @@ __pycache__/
 *.pyd
 *.sqlite3
 
-# Virtualenv
-venv/
-env/
-*.env
-*.env-non-dev
-
 
 # Docker
 *.log
