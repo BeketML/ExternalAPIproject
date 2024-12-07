@@ -17,7 +17,6 @@
 
 ![image](https://github.com/user-attachments/assets/3fe4d5df-02de-432b-af26-c7a41d30e68b)
 
-
 ## Требования
 Перед запуском убедитесь, что у вас установлены следующие компоненты:
 
@@ -145,3 +144,44 @@
 
 ## Лицензия
 Этот проект лицензируется под MIT License - подробности см. в файле LICENSE.
+
+---
+
+### **Файлы конфигурации**
+
+#### **1. `.env`**
+Используется для локальной разработки:
+
+```ini
+# Database settings
+DB_HOST=localhost             # Host for connecting to the database (use 'localhost' if running locally)
+DB_PORT=5432                  # Port for connecting to PostgreSQL (default is 5432)
+DB_USER=postgres              # Database username
+DB_PASS=your_password_here    # Database user password
+DB_NAME=your_database_name    # Name of the database
+
+# Secret key for authentication (JWT, Flask, etc.)
+SECRET_KEY="your_secret_key_here"   # Generate a unique and secure secret key for authentication
+ALGORITHM=HS256                     # Encryption algorithm used for tokens (e.g., JWT)
+
+# API URL for random users
+RANDOM_USER_API_URL="https://randomuser.me/api/"  # URL for fetching random user data
+
+#### **2. `.env-non-dev`**
+Используется для развертывания на продакшн-серверах:
+
+```ini
+# Database settings
+DB_HOST=your_production_db_host      # Host for production database
+DB_PORT=5432                          # Port for connecting to PostgreSQL (default is 5432)
+DB_USER=production_db_user            # Database username for production
+DB_PASS=your_production_password      # Database user password for production
+DB_NAME=production_database_name      # Name of the production database
+
+# Secret key for authentication (JWT, Flask, etc.)
+SECRET_KEY="your_production_secret_key_here"  # Unique and secure production secret key for authentication
+ALGORITHM=HS256                           # Encryption algorithm used for tokens (e.g., JWT)
+
+# API URL for random users (production)
+RANDOM_USER_API_URL="https://randomuser.me/api/"  # URL for fetching random user data for production
+
